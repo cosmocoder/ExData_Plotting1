@@ -1,4 +1,4 @@
-## Code to plot sub-meter readings vs. time
+## Code to plot Global Active Power, Global Reactive Power, Voltage and Sub Meter readings
 
 
 # Load the data
