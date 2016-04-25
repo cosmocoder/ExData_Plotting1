@@ -12,8 +12,8 @@ subsetData <- totalData[totalData$Date %in% c('1/2/2007', '2/2/2007'), ]
 globalActivePower <- as.numeric(subsetData$Global_active_power)
 
 # plot a histogram on screen
+png(filename = 'plot1.png', width = 480, height = 480, units = 'px', bg = 'white')
+
 hist(globalActivePower, col = 'red', main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)')
 
-# copy that histogram into 'png' device
-dev.copy(png, file = 'plot1.png', width = 480, height = 480, units = 'px', bg = 'white')
 dev.off()

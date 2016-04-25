@@ -15,8 +15,8 @@ globalActivePower <- as.numeric(subsetData$Global_active_power)
 dates <- strptime(paste(subsetData$Date, subsetData$Time, sep = ' '), '%d/%m/%Y %H:%M:%S')
 
 # plot the graph on screen
+png(filename = 'plot2.png', width = 480, height = 480, units = 'px', bg = 'white')
+
 plot(dates, globalActivePower, type = 'l', xlab = '', ylab = 'Global Active Power (kilowatts)')
 
-# copy that plot into 'png' device
-dev.copy(png, file = 'plot2.png', width = 480, height = 480, units = 'px', bg = 'white')
 dev.off()

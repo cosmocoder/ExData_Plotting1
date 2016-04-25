@@ -16,12 +16,12 @@ subMeter1 <- as.numeric(subsetData$Sub_metering_1)
 subMeter2 <- as.numeric(subsetData$Sub_metering_2)
 subMeter3 <- as.numeric(subsetData$Sub_metering_3)
 
-# plot the graph on screen
+# plot the graph
+png(filename = 'plot3.png', width = 480, height = 480, units = 'px', bg = 'white')
+
 plot(dates, subMeter1, type = 'l', xlab = '', ylab = 'Energy sub metering')
 lines(dates, subMeter2, type = 'l', col = 'red')
 lines(dates, subMeter3, type = 'l', col = 'blue')
 legend('topright', c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'), lty = 1, lwd = 2, col = c('black', 'red', 'blue'), xjust = 0, yjust = 0)
 
-# copy that plot into 'png' device
-dev.copy(png, file = 'plot3.png', width = 480, height = 480, units = 'px', bg = 'white')
 dev.off()
